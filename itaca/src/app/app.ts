@@ -8,5 +8,11 @@ import { RouterOutlet, RouterModule } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+  isMenuOpen = signal(false);
+
+  toggleMenu() {
+    this.isMenuOpen.update(value => !value);
+  }
+}
 

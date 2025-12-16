@@ -1,23 +1,26 @@
 <header>
   <div id="container-header">
-  <header>
-    <div id="logo" class="logo">
-      <a routerLink="/"><img src="https://cdn-icons-png.freepik.com/512/6969/6969728.png" alt="Itaca Logo" /></a>
-    </div>
-    <div id="'title'">
-      <h1>Itaca Lab | Diego Naranjo</h1>
-    </div>
-  </header>
-</div>
+    <header>
+      <div id="logo" class="logo">
+        <a routerLink="/"><img src="assets/logos/itaca_logo_small.png" alt="Itaca Logo" /></a>
+      </div>
+      <div id="title">
+        <h1>Itaca Lab | Diego Naranjo</h1>
+      </div>
+    </header>
+  </div>
 </header>
 
 <nav id="container-navbar">
-  <ul class="nav-links">
-      <li><a [routerLink]="['/']">Home</a></li>
-      <li><a [routerLink]="['about']">About</a></li>
-      <li><a [routerLink]="['/portfolio']">Portfolio</a></li>
-      <li><a [routerLink]="['/blog']">Blog</a></li>
-      <li><a [routerLink]="['/contact']">Contact</a></li>
+  <button class="burger-menu" (click)="toggleMenu()" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <ul class="nav-links" [class.open]="isMenuOpen()">
+    <li><a [routerLink]="['/']" (click)="toggleMenu()">Home</a></li>
+    <li><a [routerLink]="['about']" (click)="toggleMenu()">About</a></li>
+    <li><a [routerLink]="['/portfolio']" (click)="toggleMenu()">Portfolio</a></li>
+    <li><a [routerLink]="['/blog']" (click)="toggleMenu()">Blog</a></li>
+    <li><a [routerLink]="['/contact']" (click)="toggleMenu()">Contact</a></li>
   </ul>
 </nav>
 
@@ -27,16 +30,16 @@
   <div class="footer-social">
     <div class="social-icons">
       <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-        <img src="###" alt="Instagram" height="32" />
+        <img src="assets/logos/instagram.png" alt="Instagram" height="32" />
       </a>
       <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-        <img src="###" alt="LinkedIn" height="32" />
+        <img src="assets/logos/linkedin.png" alt="LinkedIn" height="32" />
       </a>
       <a href="https://github.com" target="_blank" aria-label="GitHub">
-        <img src="###" alt="GitHub" height="32" />
+        <img src="assets/logos/github.png" alt="GitHub" height="32" />
       </a>
       <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-        <img src="###" alt="YouTube" height="32" />
+        <img src="assets/logos/youtube.png" alt="YouTube" height="32" />
       </a>
     </div>
   </div>
