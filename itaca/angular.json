@@ -29,7 +29,9 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "outputPath": "dist/itaca",
+            "baseHref": "/itaca_blog/"
           },
           "configurations": {
             "production": {
