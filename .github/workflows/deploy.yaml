@@ -35,13 +35,13 @@ jobs:
         run: npx ng build --configuration production --base-href "/itaca_blog/"
         working-directory: itaca
 
-  #     - name: 🧩 Add .nojekyll file
-  #       run: echo "" > dist/itaca/browser/.nojekyll
+      - name: 🧩 Add .nojekyll file
+        run: echo "" > dist/itaca/browser/.nojekyll
 
-  #     - name: 📤 Upload Pages artifact
-  #       uses: actions/upload-pages-artifact@v3
-  #       with:
-  #         path: itaca/dist/itaca/browser
+      - name: 📤 Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: itaca/dist/itaca/browser
 
   # deploy:
   #   needs: build
