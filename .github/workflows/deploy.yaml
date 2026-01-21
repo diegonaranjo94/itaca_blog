@@ -37,11 +37,13 @@ jobs:
 
       - name: 🧩 Add .nojekyll file
         run: echo "" > dist/itaca/browser/.nojekyll
+        working-directory: itaca
 
       - name: 📤 Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: itaca/dist/itaca/browser
+        working-directory: itaca
 
   # deploy:
   #   needs: build
